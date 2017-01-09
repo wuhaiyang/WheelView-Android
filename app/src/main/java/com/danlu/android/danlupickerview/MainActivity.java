@@ -35,29 +35,24 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         wheelView2 = (WheelView) findViewById(R.id.wv_options2);
         wheelView3 = (WheelView) findViewById(R.id.wv_options3);
 
-        loadData();
-//        final List<AreaModel> datas = new ArrayList<>();
-//        for (int i = 0; i < 35; i++) {
-//            AreaModel model = new AreaModel();
-//            model.setAreaName("四川省" + i);
-//            model.setAreaId(i + "");
-//
-//            List<AreaModel.SecondBean> secondBeen = new ArrayList<>();
-//            for (int j = 0; j < 10; j++) {
-//                AreaModel.SecondBean bean = new AreaModel.SecondBean();
-//                bean.setAreaName("成都市");
-//                bean.setAreaId(i + "");
-//                secondBeen.add(bean);
-//            }
-//            model.setSecond(secondBeen);
-//            datas.add(model);
-//        }
-//        wheelView1.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                wheelView1.setAdapter(new ArrayWheelAdapter(datas));
-//            }
-//        },2000);
+//        loadData();
+        final List<AreaModel> datas = new ArrayList<>();
+        for (int i = 0; i < 35; i++) {
+            AreaModel model = new AreaModel();
+            model.setAreaName("四川省" + i);
+            model.setAreaId(i + "");
+
+            List<AreaModel.SecondBean> secondBeen = new ArrayList<>();
+            for (int j = 0; j < 10; j++) {
+                AreaModel.SecondBean bean = new AreaModel.SecondBean();
+                bean.setAreaName("成都市");
+                bean.setAreaId(i + "");
+                secondBeen.add(bean);
+            }
+            model.setSecond(secondBeen);
+            datas.add(model);
+        }
+        wheelView1.setAdapter(new ArrayWheelAdapter(datas));
         findViewById(R.id.tv_confirm).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

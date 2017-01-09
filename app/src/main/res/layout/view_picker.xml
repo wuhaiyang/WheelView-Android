@@ -47,6 +47,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            app:pickerview_lineSpacingMultiplier="3.5"
+            app:pickerview_textSize="16sp"
             />
 
         <com.danlu.lib.WheelView
