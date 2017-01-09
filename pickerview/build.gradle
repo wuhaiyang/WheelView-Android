@@ -8,7 +8,7 @@ apply plugin: 'maven'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
-
+    resourcePrefix "danluwheelview"
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 25

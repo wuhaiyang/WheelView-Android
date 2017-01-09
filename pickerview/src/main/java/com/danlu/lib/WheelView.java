@@ -65,7 +65,7 @@ public class WheelView extends View {
     int dividerColor;
 
     // 条目间距倍数
-    float lineSpacingMultiplier = 1.4F;
+    float lineSpacingMultiplier = 2.5F;
     boolean isLoop;
 
     // 第一条线Y坐标值
@@ -127,7 +127,7 @@ public class WheelView extends View {
             textColorCenter = a.getColor(R.styleable.pickerview_pickerview_textColorCenter, textColorCenter);
             dividerColor = a.getColor(R.styleable.pickerview_pickerview_dividerColor, dividerColor);
             textSize = a.getDimensionPixelOffset(R.styleable.pickerview_pickerview_textSize, textSize);
-            lineSpacingMultiplier = a.getFloat(R.styleable.pickerview_pickerview_lineSpacingMultiplier,lineSpacingMultiplier);
+            lineSpacingMultiplier = a.getFloat(R.styleable.pickerview_pickerview_lineSpacingMultiplier, lineSpacingMultiplier);
         }
         initLoopView(context);
     }
