@@ -109,6 +109,7 @@ public class WheelView extends View {
     private int drawOutContentStart = 0;//非中间文字开始绘制位置
     private static final float SCALECONTENT = 0.8F;//非中间文字则用此控制高度，压扁形成3d错觉
     private static final float CENTERCONTENTOFFSET = 6;//中间文字文字居中需要此偏移值
+    private static final float MIDDLEOFFSET = 3; // 中间选择项偏移量
 
     public WheelView(Context context) {
         this(context, null);
@@ -414,7 +415,7 @@ public class WheelView extends View {
                 } else if (translateY >= firstLineY && maxTextHeight + translateY <= secondLineY) {
                     // 中间条目
                     canvas.clipRect(0, 0, measuredWidth, (int) (itemHeight));
-                    canvas.drawText(contentText, drawCenterContentStart, maxTextHeight - CENTERCONTENTOFFSET, paintCenterText);
+                    canvas.drawText(contentText, drawCenterContentStart, maxTextHeight - MIDDLEOFFSET, paintCenterText);
                     int preSelectedItem = adapter.indexOf(visibles[counter]);
                     if (preSelectedItem != -1) {
                         selectedItem = preSelectedItem;
